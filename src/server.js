@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const app = express();
 const port = process.env.PORT || 3333;
+const database = require('./database/index');
 
 const routes = require('./routes');
 
@@ -15,7 +16,6 @@ app.use(bodyParser.json());
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded()); //middleware
 app.use(express.static(__dirname + '/public')); //importa os arquivos static (styles e css)
-
 app.use(routes) 
 
 app.listen(port, () => {
