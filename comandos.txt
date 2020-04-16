@@ -1,0 +1,6 @@
+yarn sequelize db:create  --cria o banco de dados se nao tiver
+yarn sequelize db:migrate --gera as migrations das tabelas
+
+- Diferença - 
+* Migrations: gerencia as alterações que a gente faz no banco de dados,
+* Models: 

@@ -1,0 +1,31 @@
+<%- contentFor('body') %>
+
+<a href="/">
+    <button type="button" class="btn btn-primary"> < Clientes </button>
+  </a>
+  
+  <div style="height: 40px"></div>
+  
+  <h1 style="height: 80px"> Fornecedores</h1>
+  
+  <div style="height: 80px">
+    <a href="/form">
+      <button type="button" class="btn btn-primary">Novo</button>
+    </a>
+  </div>
+
+<div class="row">
+  <% for(var fornecedor of fornecedores) { %>
+    <div class="col-xs-1-12 p-2">
+      <div class="card">
+        <img class="card-img-top" src="https://picsum.photos/id/237/200/300" />
+        <div class="card-body">
+          <h5 class="card-title"><%= fornecedor.nome %> <%= fornecedor.sobrenome %></h5>
+          <p class="card-text"> <%= fornecedor.email %></p>
+          <p class="card-text"><%= fornecedor.cnpj %></p>
+          <a href="#" class="btn btn-primary">Editar</a>
+        </div>
+      </div>
+    </div>
+  <% } %>
+</div>
