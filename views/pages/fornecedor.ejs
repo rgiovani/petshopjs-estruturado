@@ -17,23 +17,27 @@
     <div class="row">
     <% for(var fornecedor of fornecedores) { %>
         <div class="col-xs-1-12 p-2">
-        <div class="card">
-            <img class="card-img-top" src="https://picsum.photos/id/237/200/300" />
-            <div class="card-body">
-            <h5 class="card-title"><%= fornecedor.nome %> <%= fornecedor.sobrenome %></h5>
-            <p class="card-text"> <%= fornecedor.email %></p>
-            <p class="card-text"><%= fornecedor.cnpj %></p>
-            <a href="#" class="btn btn-primary" style="border:none">
-                <i class="fa fa-pencil"></i>
-                    Editar
-            </a>
-            <a href="#" class="btn btn-primary" style="background-color:red; border:none">
-                <i class="fa fa-remove"></i>
-                  Excluir
-            </a>
-              
+            <div class="card">
+                <div class="card" style="padding: 12px 12px">
+                    <div style="align-self: center;">
+                    <img src="https://picsum.photos/id/237/200/300" height=300 width=210 />
+                    </div>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title"><%= fornecedor.nome %> <%= fornecedor.sobrenome %></h5>
+                    <p class="card-text"> <%= fornecedor.email %></p>
+                    <p class="card-text"><%= fornecedor.cnpj %></p>
+                    <a href="#" class="btn btn-primary" style="border:none">
+                        <i class="fa fa-pencil"></i>
+                            Editar
+                    </a>
+                    <a href="#" class="btn btn-primary" style="background-color:red; border:none">
+                        <i class="fa fa-remove"></i>
+                        Excluir
+                    </a>
+                    
+                </div>
             </div>
-        </div>
         </div>
     <% } %>
     </div>
