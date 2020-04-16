@@ -1,12 +1,18 @@
 <%- contentFor('body') %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">    
+   
+    <div style="height: 40px"></div>
 
-    <a href="/">
-        <button type="button" class="btn btn-primary botaoVoltar"> < Voltar </button>
+    <a href="/fornecedor">
+        <button type="button" class="btn btn-primary botao_voltar"> 
+            <i class="fa fa-mail-reply" style="font-size: 25px;"></i>
+            Voltar
+        </button>
     </a>
+    
+    <h1>Novo Fornecedor</h1>
 
-    <h1>Clientes</h1>
-
-    <form action="/Cliente/add" method="POST">
+    <form action="/Fornecedor/add" method="POST">
         <div class="form row">
             <div class = "form-group col-4">
                 <input type = "text" class="form-control" name="nome" placeholder="Nome"/>
@@ -18,20 +24,22 @@
                 <input type = "text" class="form-control" name="email" placeholder="Email"/>
             </div>
             <div class = "form-group col-4">
-                <input type = "text" class="form-control" name="cpf" placeholder="Cpf"/>
+                <input type = "text" class="form-control" name="cnpj" placeholder="Cnpj"/>
             </div>
         </div>
 
-        <button type="submit" class="btn btn-primary botaoSalvar">Salvar ++</button>
+        <button type="submit" class="btn btn-primary botao_salvar">
+            Salvar 
+            <i class="fa fa-check" style="font-size: 14px"></i>
+        </button>
     </form>
 
-
 <style>
-    .botaoVoltar {
-        background-color: #f44336;
+    .botao_voltar {
+        background-color: white;
         border: none;
-        color: white;
-        padding: 4px 8px;
+        color: #f44336;
+        padding: 6px 8px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -39,7 +47,7 @@
         margin: 4px 2px;
         cursor: pointer;
     }
-    .botaoSalvar {
+    .botao_salvar {
         background-color: #4BB462;
         border: none;
         color: white;
@@ -50,8 +58,7 @@
         font-size: 16px;
         margin: 4px 2px;
         cursor: pointer;
-    }
-    
+    }    
 </style>
 
 
