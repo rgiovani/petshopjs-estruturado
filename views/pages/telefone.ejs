@@ -3,10 +3,10 @@
 
   <div style="height: 40px"></div>
 
-  <h1 style="height: 80px"> Clientes</h1>
+  <h1 style="height: 80px"> Telefones</h1>
 
   <div style="height: 80px">
-    <a href="/clienteForm">
+    <a href="/telefoneForm">
       <button type="button" class="btn btn-primary botao_novo">
         <i class = "fa fa-plus" style="font-size:13px"></i>
           Novo
@@ -15,7 +15,7 @@
   </div>
 
   <div class="row">
-    <% for(var cliente of clientes) { %>
+    <% for(var telefone of telefones) { %>
       <div class="col-xs-1-12 p-2">
         <div class="card ">
           <div class="card" style="padding: 12px 12px">
@@ -24,9 +24,9 @@
             </div>
           </div>
           <div class="card-body">
-            <h5 class="card-title"><%= cliente.nome %> <%= cliente.sobrenome %></h5>
-            <p class="card-text"> <%= cliente.email %></p>
-            <p class="card-text"><%= cliente.cpf %></p>
+            <h5 class="card-title"><%= telefone.ddi %> <%= telefone.ddd %></h5>
+            <p class="card-text"> <%= telefone.numero %></p>
+            <p class="card-text"><%= telefone.descricao %></p>
             
             <a href="#" class="btn btn-primary" style="border:none">
               <i class="fa fa-pencil"></i>
