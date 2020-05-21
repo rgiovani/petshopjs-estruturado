@@ -84,19 +84,20 @@ routes.post('/Endereco/add', async(req,res)=>{
     res.redirect('/endereco');
 })
 
-routes.delete("/Cliente/:id", async (req, res) => {
-    await Cliente.destroy({where:{id:req.params.id}})
-    .then((clienteDeletar) => {
-      res.json(clienteDeletar);
+routes.get("/cliente-delete/:id", async (req, res) =>{
+    Cliente.destroy({
+        where: {'id': req.params.id}
     })
     res.redirect('/cliente');
 });
 
-
-routes.delete('/Cliente/delete', async(req,res)=>{
-    let {nome, sobrenome, email, cpf} = req.body;
-    const clientes = await Cliente.destroy({id});
+routes.get("/fornecedor-delete/:id", async (req, res) => {
+    Fornecedor.destroy({
+        where: {'id': req.params.id}
+    })
     
-})
+    res.redirect('/fornecedor');
+});
+
 
 module.exports = routes;
