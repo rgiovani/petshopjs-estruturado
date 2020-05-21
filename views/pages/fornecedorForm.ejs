@@ -3,7 +3,7 @@
    
     <div style="height: 40px"></div>
 
-    <a href="/fornecedor">
+    <a href="/fornecedores">
         <button type="button" class="btn btn-primary botao_voltar"> 
             <i class="fa fa-mail-reply" style="font-size: 25px;"></i>
             Voltar
@@ -12,8 +12,8 @@
     
     <h1>Novo Fornecedor</h1>
 
-    <form action="/Fornecedor/add" method="POST">
-        <div class="form row">
+    <form action="/fornecedores/add" method="POST">
+        <!-- <div class="form row">
             <div class = "form-group col-4">
                 <input type = "text" class="form-control" name="nome" placeholder="Nome"/>
             </div>
@@ -26,7 +26,71 @@
             <div class = "form-group col-4">
                 <input type = "text" class="form-control" name="cnpj" placeholder="Cnpj"/>
             </div>
-        </div>
+        </div> -->
+
+
+        <br>
+        <br>
+        <h5>Para cadastrar um novo fornecedor preencha os dados abaixo:</h5>
+        <form action="/clientes/add" method="POST">
+            <div class="form row">
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="nome" placeholder="Nome"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="sobrenome" placeholder="Sobrenome"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="email" placeholder="Email"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="cnpj" placeholder="Cpf"/>
+                </div>
+            </div>
+            
+            <br>
+    
+            <h5>Endereco: </h5>
+            <div class="form row">
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="rua" placeholder="Rua"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="numeroResidencia" placeholder="Numero da residencia"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="bairro" placeholder="Bairro"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="cep" placeholder="Cep"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="cidade" placeholder="Cidade"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="estado" placeholder="Estado"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="complemento" placeholder="Complemento"/>
+                </div>
+            </div>
+            
+            <br>
+            <h5>Telefone: </h5>
+            <div class="form row">
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="ddi" placeholder="DDI"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="ddd" placeholder="DDD"/>
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="numeroTelefone" placeholder="Numero"/>            
+                </div>
+                <div class = "form-group col-4">
+                    <input type = "text" class="form-control" name="descricao" placeholder="Descricao"/>            
+                </div>
+            </div>
 
         <button type="submit" class="btn btn-primary botao_salvar">
             Salvar 

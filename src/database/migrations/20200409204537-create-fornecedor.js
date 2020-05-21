@@ -25,6 +25,20 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
+      id_endereco: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { model: 'enderecos', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
+      id_telefone: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references: { model: 'telefones', key: 'id' },
+        onUpdate: 'CASCADE',
+        onDelete: 'CASCADE',
+      },
       created_at: {
         type: Sequelize.DATE,
         allowNull: false,

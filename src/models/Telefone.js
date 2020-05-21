@@ -11,6 +11,10 @@ class Telefone extends Model {
             sequelize,
         })
     }
+
+    static associate(models) {
+        this.belongsTo(models.Telefone, { foreignKey: 'id_telefone' });
+    }
 }
 
 module.exports = Telefone;

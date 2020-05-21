@@ -12,6 +12,11 @@ class Cliente extends Model{
             sequelize,
         })
     }
+
+    static associate(models) {
+        this.hasOne(models.Endereco, { foreignKey: 'id_endereco' });
+        this.hasOne(models.Telefone, { foreignKey: 'id_telefone' });
+    }
 }
 
 module.exports = Cliente;

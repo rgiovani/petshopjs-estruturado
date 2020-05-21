@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const dbConfig = require('../config/database');
 
 const connection = new Sequelize(dbConfig);
+
 const Cliente = require('../models/Cliente');
 const Fornecedor = require('../models/Fornecedor');
 const Endereco = require('../models/Endereco');
@@ -10,5 +11,8 @@ Cliente.init(connection);
 Fornecedor.init(connection);
 Endereco.init(connection);
 Telefone.init(connection);
+
+Cliente.associate(connection.models);
+Fornecedor.associate(connection.models);
 
 module.exports = connection;
