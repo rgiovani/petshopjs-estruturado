@@ -2,7 +2,7 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('fornecedors', {
+    return queryInterface.createTable('clientes', {
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -21,8 +21,8 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      cnpj: {
-        type: Sequelize.STRING,
+      cpf: {
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       id_endereco: {
@@ -51,6 +51,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('fornecedors');
+    return queryInterface.dropTable('clientes');
   }
 };

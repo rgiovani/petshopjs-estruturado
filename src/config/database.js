@@ -3,7 +3,7 @@ module.exports = {
     host: 'localhost',
     username: 'root',
     password: 'root',
-    database: 'petshopEstruturado',
+    database: 'petshop-estruturado',
     define: {
         timestamps: true,
         underscored: true,

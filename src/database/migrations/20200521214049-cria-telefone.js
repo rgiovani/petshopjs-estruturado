@@ -10,15 +10,15 @@ module.exports = {
         allowNull: false,
       },
       ddi: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       ddd: {
-        type: Sequelize.STRING,
-        allowNull: true,
+        type: Sequelize.INTEGER,
+        allowNull: false,
       },
       numero: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       descricao: {
@@ -37,6 +37,12 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('telefones');
+    /*
+      Add reverting commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.dropTable('users');
+    */
   }
 };

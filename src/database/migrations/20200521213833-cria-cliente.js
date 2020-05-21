@@ -22,7 +22,7 @@ module.exports = {
         allowNull: false,
       },
       cpf: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
       },
       id_endereco: {
@@ -51,6 +51,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('clientes');
+   
   }
 };

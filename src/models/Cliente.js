@@ -1,6 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 
-
 class Cliente extends Model{
     static init(sequelize){  
         super.init({
